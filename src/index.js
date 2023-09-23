@@ -1,3 +1,4 @@
+import axios from "axios";
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 import { Notify } from "notiflix";
 
