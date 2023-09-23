@@ -1,0 +1,89 @@
+.breed-select {
+    font-size: large;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+  }
+  
+  .text-block {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  
+  .div {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .cat-info {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .cat-img {
+    border-radius: 10px;
+    display: block;
+    width: 600px;
+    height: auto;
+  }
+
+  .text-block {
+    display: flex;
+    gap: 20px;
+  }
+
+  .cat-name {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .cat-description {
+    font-size: 25px;
+    width: 500px;
+  }
+  
+  .cat-temperament {
+    font-size: 20px;
+  }
+  
+  
+  .is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  
+  /* Loader */
+  .loader {
+      width: 48px;
+      height: 48px;
+      border:10px solid #FFF;
+      border-radius: 50%;
+      position: relative;
+      transform:rotate(45deg);
+      box-sizing: border-box;
+    }
+    .loader::before {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      inset:-10px;
+      border-radius: 50%;
+      border:10px solid #FF3D00;
+      animation: prixClipFix 2s infinite linear;
+    }
+
+    @keyframes prixClipFix {
+        0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+        25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+        50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+        75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+        100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+    }
+      
