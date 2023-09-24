@@ -1,5 +1,5 @@
 import axios from "axios";
-import { fetchBreeds, fetchCatByBreed } from './cat-api';
+import { fetchBreeds, fetchCatByBreed } from './js/cat-api';
 import { Notify } from "notiflix";
 
 const selectBreed = document.querySelector('.breed-select');
@@ -45,7 +45,9 @@ function selectCat(e) {
             pageLoader.classList.add('is-hidden')
             infoCat.classList.remove('is-hidden')
         })
-        .catch(_error => { Notify.failure('Oops! Something went wrong! Try reloading the page!') })
+        .catch(_error => { 
+            pageLoader.classList.add('is-hidden')
+            Notify.failure('Oops! Something went wrong! Try reloading the page!') })
 }
 
 function renderInfo(data) {
